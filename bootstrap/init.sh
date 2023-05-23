@@ -27,5 +27,5 @@ gcloud artifacts repositories create pop-stats --location=europe-west1 \
 sed -e "s/frits-demo/${PROJECT_ID}/" clouddeploy.yaml > clouddeploy.yaml
 # creates the Google Cloud Deploy pipeline
 gcloud deploy apply --file clouddeploy.yaml \
---region=europe-west1 --project=$PROJECT_ID
+--region=europe-west1 --project=frits-demo
 echo "init done. To create clusters, run: ./gke-cluster-init.sh"
